@@ -117,7 +117,7 @@ tuner = Tuner(
     # Add some parameters to tune
     param_space={"train_loop_config": {"batch_size": tune.choice([1, 2, 3, 4, 5])}},
     # Specify tuning behavior
-    tune_config=tune.TuneConfig(metric="running_loss", mode="min", num_samples=4),
+    tune_config=tune.TuneConfig(metric="running_loss", mode="min", num_samples=3),
 )
 result = tuner.fit()
 
